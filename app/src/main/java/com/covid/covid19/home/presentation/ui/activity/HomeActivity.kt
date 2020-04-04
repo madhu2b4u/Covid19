@@ -121,10 +121,10 @@ class HomeActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         ShareCompat.IntentBuilder.from(this)
             .setType("text/plain")
             .setChooserTitle("Covid tracker")
-            .setText("No more going to websites for Covid-19 data, Just install this app once and there you are with all data updates!"+
+            .setText("No more going to websites for Covid-19 data, Just install this app once and there you are with all data updates! Due to app policies this application is not available in playstore"+
                     "\n" +
                     "\n" +
-                    "https://1drv.ms/u/s!AmQtH2XTelior3LxeY-EliQTwZqw?e=JBnU35")
+                    "https://1drv.ms/u/s!AmQtH2XTelior3NSR1DPMXu9LGXQ?e=DCVO6z")
             .startChooser()
     }
 
