@@ -18,7 +18,7 @@ This repository contains simple COVID19 data monitoring with android stack MVVM,
  </table>
 
 #### Update
-Since Google restrict app distribution about covid-19 on Google Play Store, we will upload latest feature apk [here](https://drive.google.com/folderview?id=1MaO9mIKWCFWSK2lFtEfKge1z8XDesi8n)
+Since Google restrict app distribution about covid-19 on Google Play Store, we will upload latest feature apk [here](https://drive.google.com/drive/folders/1ja2sjBMCIZvYk-gNhVmtXELBmD66HhuI?usp=sharing)
 
 ### Library References
 1. RxJava2 
