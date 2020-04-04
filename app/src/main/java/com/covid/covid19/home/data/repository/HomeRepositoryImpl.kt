@@ -1,9 +1,11 @@
 package com.covid.covid19.home.data.repository
 
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
 import com.covid.covid19.common.Result
 import com.covid.covid19.home.data.remote.model.indiastats.IndiaStatsResponse
+import com.covid.covid19.home.data.remote.model.news.NewsResponse
 import com.covid.covid19.home.data.remote.model.update.ApkData
 import com.covid.covid19.home.data.remote.model.worldstats.WorldStatsResponse
 import com.covid.covid19.home.data.remote.source.HomeRemoteDataSource
@@ -57,5 +59,18 @@ class HomeRepositoryImpl @Inject constructor(
         }
     }
 
+    override suspend fun getNews(page: Int)= liveData {
+        emit(Result.loading())
+        try {
+            var updateResponse: NewsResponse? = null
+
+            if (updateResponse == null) {
+                updateResponse = remoteDataSource.getNews(page)
+            }
+            emit(Result.success(updateResponse))
+        } catch (exception: Exception) {
+            emit(Result.error(exception.message ?: ""))
+        }
+    }
 
 }

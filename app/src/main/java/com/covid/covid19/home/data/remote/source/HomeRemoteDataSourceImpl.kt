@@ -1,6 +1,7 @@
 package com.covid.covid19.home.data.remote.source
 
 import com.covid.covid19.di.qualifiers.IO
+import com.covid.covid19.home.data.remote.model.news.NewsResponse
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 import kotlin.coroutines.CoroutineContext
@@ -33,6 +34,15 @@ class HomeRemoteDataSourceImpl @Inject constructor(
         val response = service.getUpdate(url).await()
         if (response.isSuccessful)
             response.body()?.apkData?: throw Exception("no stats")
+        else
+            throw Exception("invalid request with code ${response.code()}")
+
+    }
+
+    override suspend fun getNews(page: Int) = withContext(context) {
+        val response = service.getNews(page).await()
+        if (response.isSuccessful)
+            response.body()?: throw Exception("no stats")
         else
             throw Exception("invalid request with code ${response.code()}")
 

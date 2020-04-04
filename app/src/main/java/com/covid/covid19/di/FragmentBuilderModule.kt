@@ -25,4 +25,8 @@ abstract class FragmentBuilderModule {
 
     @ContributesAndroidInjector
     abstract fun contributesAboutFragment(): AboutFragment
+
+
+    @ContributesAndroidInjector
+    abstract fun contributesNewsFragment(): NewsFragment
 }

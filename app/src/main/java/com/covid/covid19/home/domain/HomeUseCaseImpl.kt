@@ -14,4 +14,7 @@ class HomeUseCaseImpl @Inject constructor(private val mHomeRepository: HomeRepos
     override suspend fun getWorldStat(url: String)= mHomeRepository.getWorldStats(url)
 
     override suspend fun getUpdate(url: String) = mHomeRepository.getUpdate(url)
+
+    override suspend fun getNews(page: Int)= mHomeRepository.getNews(page)
+
 }

@@ -16,6 +16,7 @@ import com.covid.covid19.R
 import com.covid.covid19.common.BaseActivity
 import com.covid.covid19.home.presentation.ui.fragments.CovidRiskFragment
 import com.covid.covid19.home.presentation.ui.fragments.HomeFragment
+import com.covid.covid19.home.presentation.ui.fragments.NewsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.content_main.*
@@ -80,10 +81,9 @@ class HomeActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                     .commit()
             }
             R.id.nav_news -> {
-               /* val fragment = AboutFragment()
+                val fragment = NewsFragment()
                 supportFragmentManager.beginTransaction().replace(R.id.container, fragment, fragment.javaClass.simpleName)
-                    .commit()*/
-                Toast.makeText(this, "Coming soon", Toast.LENGTH_SHORT).show()
+                    .commit()
             }
 
 
@@ -124,7 +124,7 @@ class HomeActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             .setText("No more going to websites for Covid-19 data, Just install this app once and there you are with all data updates!"+
                     "\n" +
                     "\n" +
-                    "https://github.com/madhu2b4u/Covid19/blob/master/app/release/app-release.apk")
+                    "https://1drv.ms/u/s!AmQtH2XTelior3LxeY-EliQTwZqw?e=JBnU35")
             .startChooser()
     }
 

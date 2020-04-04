@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.covid.covid19.common.Result
 import com.covid.covid19.home.data.remote.model.indiastats.IndiaStatsResponse
+import com.covid.covid19.home.data.remote.model.news.NewsResponse
 import com.covid.covid19.home.data.remote.model.update.ApkData
 import com.covid.covid19.home.data.remote.model.worldstats.WorldStatsResponse
 import com.covid.covid19.home.domain.HomeUseCase
@@ -17,6 +18,8 @@ class HomeViewModel @Inject constructor(private val mHomeUseCase: HomeUseCase) :
     val indiaResult = MediatorLiveData<Result<IndiaStatsResponse>>()
     val worldResult = MediatorLiveData<Result<WorldStatsResponse>>()
     val updateResult = MediatorLiveData<Result<ApkData>>()
+    val newsResult = MediatorLiveData<Result<NewsResponse>>()
+
 
 
     fun loadIndia(url :String, mustFetchFromNetwork: Boolean = false) {
@@ -39,6 +42,14 @@ class HomeViewModel @Inject constructor(private val mHomeUseCase: HomeUseCase) :
         viewModelScope.launch {
             updateResult.addSource(mHomeUseCase.getUpdate(url)) {
                 updateResult.value = it
+            }
+        }
+    }
+
+    fun loadNews(page :Int) {
+        viewModelScope.launch {
+            newsResult.addSource(mHomeUseCase.getNews(page)) {
+                newsResult.value = it
             }
         }
     }
