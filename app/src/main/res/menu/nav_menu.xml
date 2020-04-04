@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:iconTint="@color/colorPrimary"
+            android:title="@string/home"/>
+        <item
+            android:id="@+id/nav_globe"
+            android:icon="@drawable/ic_virus"
+            android:iconTint="@color/colorPrimary"
+            android:title="@string/self_check"/>
+
+        <item
+            android:id="@+id/nav_news"
+            android:icon="@drawable/ic_globe"
+            android:iconTint="@color/colorPrimary"
+            android:title="News"/>
+
+    </group>
+
+</menu>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_graph"
+    app:startDestination="@id/statList">
+
+    <fragment
+        android:id="@+id/statList"
+        android:name="com.covid.covid19.home.presentation.ui.fragments.StatFragment"
+        android:label="fragment_stat"
+        tools:layout="@layout/fragment_stat">
+
+        <action
+            android:id="@+id/action_india"
+            app:destination="@id/indiaDetails"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@anim/fade_out" />
+
+        <action
+            android:id="@+id/action_world"
+            app:destination="@id/worldDetails"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@anim/fade_out" />
+
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/indiaDetails"
+        android:name="com.covid.covid19.home.presentation.ui.fragments.IndiaFragment"
+        android:label="fragment_india"
+        tools:layout="@layout/fragment_data">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/worldDetails"
+        android:name="com.covid.covid19.home.presentation.ui.fragments.WorldFragment"
+        android:label="fragment_world"
+        tools:layout="@layout/fragment_data">
+
+    </fragment>
+
+
+</navigation>
