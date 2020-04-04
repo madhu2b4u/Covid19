@@ -124,7 +124,7 @@ class HomeActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             .setText("No more going to websites for Covid-19 data, Just install this app once and there you are with all data updates!"+
                     "\n" +
                     "\n" +
-                    "https://drive.google.com/file/d/1I6-R1vJ7sObymziOzPiZoT7Zvq8HoH1q/view?usp=sharing")
+                    "https://github.com/madhu2b4u/Covid19/blob/master/app/release/app-release.apk")
             .startChooser()
     }
 
