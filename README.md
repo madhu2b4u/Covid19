@@ -16,8 +16,10 @@ This repository contains simple COVID19 data monitoring with android stack MVVM,
 
   </tr>
  </table>
-
-#### Update
+ 
+ 
+### Update
+<img src="screenshots/download.png">
 Since Google restrict app distribution about covid-19 on Google Play Store, we will upload latest feature apk [here](https://drive.google.com/drive/folders/1ja2sjBMCIZvYk-gNhVmtXELBmD66HhuI?usp=sharing)
 
 ### Library References
