@@ -1,5 +1,8 @@
 #Android covid19
 This repository contains simple COVID19 data monitoring with android stack MVVM, Live Data, Koin, RxJava, RxBinding.
+Api from worlometer
+Indian stats from indian govt api
+Apollo sdk integrted
 
 ### Screenshots
 <table>
